@@ -3,7 +3,7 @@
 This menu will be composed of 4 parts. Each part will be placed inside your own branch.
 
 
-###Part 1.
+### [Part 1.](https://github.com/tdantas/about-chef/tree/part-1)
 
  **Configuring your Workstation to talk with the Chef-Server**
 
@@ -18,4 +18,7 @@ This menu will be composed of 4 parts. Each part will be placed inside your own 
 ### Part 4.
    
    **Provisioning EC2 instances with Vagrant and Hosted-Chef**
+   
+   
+ 
    
