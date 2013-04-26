@@ -18,10 +18,6 @@ Using Chef, we create one **Cookbook** that will contains instructions ( **Recip
 
 **Disclaimer**: IMHO, system administrators are really necessary to Tuning your enviroment/ perform audits routine/OS updates, patchs/ Networking infrastructure/ Security Holes and may others duties that is not the main skill for one developer.
 
-## Goal
-
-This MENU will guide you through 4 steps to enable your Workstation to talk with the Chef-Server.
-
 
 ## Chef components
 
@@ -38,7 +34,7 @@ There are 3 flavors that you could use:
 
 ##### Node
 
-A node is whatever host that have one **chef-client** installed.
+A node is whatever host that have one **chef-client** installed. Think as the Target
 
 The node will be provisioned with *recipes* that was configured in the **Chef-Server**.
 
