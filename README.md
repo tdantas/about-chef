@@ -4,45 +4,45 @@
 
 ## Overview
 
-Every project needs, at least, one person that knows how to configure and install all components that make your infrastructure.
+Every project needs at least one person that knows how to configure and install all components that make your infrastructure.
 
 In the IT's vocabulary we call this person as **System Administrators** (SysAdmin). SysAdmins are the hardware's gods in your company, they work in the Operational Department and know how to configure and control your enviroment. Some developers, without hardware's afinity, love this separation of concerns in the organization. In the OOP world is the same as Single Responsability principle. 
 
-Now startups from every corner in the world is fighting for not only developments capabilities. Developer that knows how to configure and tunning the enviroment will shine. This new kid on the block are called **devops**
+Now startups from every corner of the world are fighting not only for developments capabilities. Developers that know how to configure and tunne the enviroment will shine. This new kid on the block is called **devops**
 
-DevOps is a developer with System Administration's competencies. They will setup your enviroment and you are ready to get traction and make money.
+DevOps is a developer with System Administration's competencies. They will setup your enviroment and get you ready to get traction and make money.
 
-With the DRY ( *Don't Reapeat Yourself* ) principle in mind, Chef was built. Chef is an automation framework that makes it easy to provisioning servers.
+With the DRY ( *Don't Reapeat Yourself* ) principle in mind, Chef was built. Chef is an automation framework that makes it easy to provision servers.
 
 Using Chef, we create one **Cookbook** that will contains instructions ( **Recipes** ) to configure your machine ( **Node** ).
 
-**Disclaimer**: IMHO, system administrators are really necessary to Tuning your enviroment/ perform audits routine/OS updates, patchs/ Networking infrastructure/ Security Holes and may others duties that is not the main skill for one developer.
+**Disclaimer**: IMHO, system administrators are really necessary to Tuning your enviroment/ perform audits routine/OS updates, patchs/ Networking infrastructure/ Security Holes and many others duties that are not the main skill for a developer.
 
 
 ## Chef components
 
 ##### Chef Server
 
-Is the main repository for your **cookbooks**. Is the central piece that aggregate informations about all nodes in your network.
+Is the main repository for your **cookbooks**. Is the central piece that aggregates informations about all nodes in your network.
 
 There are 3 flavors that you could use:
 
 * Hosted Chef ( Chef as SaaS provided by Opscode)
-* Private Chef ( Chef on the premises of the person. Inside your organization.)
-* Open Source Chef Server ( Open Source Version that contains much of the same funcionality as Hosted Chef. All fixes, updates you must apply by yourself).
+* Private Chef ( Chef on the premises of the company. Inside your organization.)
+* Open Source Chef Server ( Open Source Version that contains much of the same funcionality as Hosted Chef. All fixes and updates you must apply by yourself).
 
 
 ##### Node
 
 A node is whatever host that have one **chef-client** installed. Think as the Target
 
-The node will be provisioned with *recipes* that was configured in the **Chef-Server**.
+The node will be provisioned with *recipes* that are configured in the **Chef-Server**.
 
-When you command the provisioning, the **Node** will communicate with the **Chef-Server** using the configured **chef-client**. The chef-client contains the recipe execution environment that will run recipes that you configured in the chef-server for the specific node.
+When you command the provisioning the **Node** will communicate with the **Chef-Server** using the configured **chef-client**. The chef-client contains the recipe execution environment that will run recipes that you configured in the chef-server for the specific node.
 
 ##### Workstation
 
-The workstation is your playground ( Your development machine ). In the workstation you create the cookbooks and upload to the chef-server. 
+The workstation is your playground ( Your development machine ). In the workstation you create the cookbooks and upload them to the chef-server. 
 
 The workstation talks with the chef-server using the *Knife* command line tool.
 
